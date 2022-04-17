@@ -1,0 +1,81 @@
+ *{
+    margin: 0;
+} 
+.background-image{
+    background-image:url('photos/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.heading {
+    padding: 10px 5px 5px 10px;
+    font-style: italic;
+    font-size: larger;
+    text-align:center;
+    line-height:0%;
+    margin: 0;
+}
+.heading h1{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.login{
+    border: 20px;
+    font-size: large;
+    line-height: 10mm;
+    background-image: none;
+    background-color:rgba(241, 243, 243, 0.963);
+    position:absolute;
+    width: 320px;
+    height: 300px;
+    padding: 10px 5px 10px 20px;
+    margin: 15vh 130vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px;
+}
+button{
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: blue;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+.slogan{
+    margin: 28vh 5vh;
+    padding-right: 100vh;
+    position:relative;
+    font-size: 10mm;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    -webkit-text-stroke: 0.3vw #ffffffe0;
+    text-transform: uppercase;
+}
+ .slogan ::before{
+    content:attr(data-text);
+    position:absolute;
+    padding-right: 100vh;
+    height: 100%;
+    color: #4482a1;
+    -webkit-text-stroke: 0vw #ffffffe0;
+    overflow: hidden;
+    animation-name: animate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+@keyframes animate{
+    0%,100%
+    {
+        width: 0;
+    }
+    10%,90%
+    {
+        width: 50%;   
+    }
+} 
