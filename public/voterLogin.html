@@ -3,7 +3,7 @@
 
 <head>
     <title>Voter Portal</title>
-    <link href="main.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,16 +18,19 @@
                     -John Lewis</p>
              </div>
           <div class="login">
-            <form method="post">
+            
                 <h3><u>Voter Login</u></h3>
-                Voter Id: <input type="text" name="voterId"></br>
-                Date of Birth: <input type="date" name="dob"></br>
-                <button type="submit">Log In</button> <button type="reset">Reset</button></br>
+                Voter Id: <input id="voter-id" type="text" name="voterId"></br>
+                Date of Birth: <input id="voter-dob" type="date" name="dob"></br>
+                <button id="voter-login" type="submit">Log In</button> <button type="reset">Reset</button></br>
                 <h4>OR</br><a href="adminLogin.html">Login as a Admin.</a></h4>
-            </form>
+            
           </div>
        </div>
     </div>
+
+    <script src="./scripts/cute-alert/cute-alert.js"></script>
+    <script src="./scripts/voterLogin.js"></script>
 </body>
 
 </html>
