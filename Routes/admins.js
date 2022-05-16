@@ -1,10 +1,11 @@
 const express=require('express')
 const router = express.Router();
-const {isLoggedIn,addVoter,addCandidate,listCandidates,listVoters} = require('../Controllers/admins')
+const {isAdmin,isLoggedIn,addVoter,addCandidate,listCandidates,listVoters,deleteVoter} = require('../Controllers/admins')
 
+router.post('/is-admin',isAdmin)
 router.post('/add-voter',isLoggedIn,addVoter);
 router.post('/add-candidate',isLoggedIn,addCandidate);
-router.get('/list-candidates',isLoggedIn,listCandidates);
-router.get('/list-voters',isLoggedIn,listVoters)
-
+router.post('/list-candidates',isLoggedIn,listCandidates);
+router.post('/list-voters',isLoggedIn,listVoters)
+router.delete('/delete-voter',isLoggedIn,deleteVoter);
 module.exports = router
