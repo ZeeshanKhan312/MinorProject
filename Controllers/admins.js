@@ -3,6 +3,40 @@ const {Voters,Candidates,Admins} = require('../Models')
 const id_generator = require('short-unique-id')
 const uid = new id_generator({length:6})
 module.exports = {
+    isAdmin:async function(req, res,next){
+        console.log(req.body)
+        const {AdminDetails} = req.body
+
+        if(!AdminDetails){
+            return res.status(404).json(
+                {
+                    error:{message:'Not allowed'}
+                }
+                )
+        }
+
+        const admin = await Admins.findOne({where:{
+            username: AdminDetails?.username
+        }})
+
+        if(!admin) {
+            return res.status(404).json(
+                {
+                    error:{message:'Admin does not exist'}
+                }
+                )
+        }
+        if(admin.password!==AdminDetails.password){
+            return res.status(404).json(
+                {
+                   error:{ message:'Username/Password not correct'}
+                }
+                )
+        }
+
+        return res.status(200).json(admin)
+
+    },
     isLoggedIn:async function(req, res, next) {
         console.log(req.body)
         const {AdminDetails} = req.body
@@ -45,7 +79,7 @@ module.exports = {
             if(!Voter.name||!Voter.dob||!Voter.address||!Voter.mobile_no){
                 return res.status(404).json(
                     {
-                        message:'Incomplete data'
+                        error:{message:'Incomplete data'}
                     }
                     )
             }
@@ -104,5 +138,17 @@ module.exports = {
         const voters = await Voters.findAll();
 
         res.json(voters)
+    },
+    deleteVoter:async function(req, res, next){
+        try {
+            const {voterId} = req.body
+
+            await Voters.destroy({where: {voterId:voterId}}).then(res=>{
+                res.json(res)
+            })
+        } catch (error) {
+            return res.status(404).json(error)
+            
+        }
     }
 }
