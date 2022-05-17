@@ -23,9 +23,8 @@ submitButton.addEventListener('click',async(e)=>{
                     username:localStorage.getItem('admin-username'),
                     password:localStorage.getItem('admin-pass')
                 },
-                Candidate:{
                     name:nameInput.value,
-                }
+                
             })
     }).then(response=>response.json())
 
@@ -34,4 +33,5 @@ submitButton.addEventListener('click',async(e)=>{
         return
     }
     alert(res.message)
+    window.location.replace("/adminTask.html");
 })

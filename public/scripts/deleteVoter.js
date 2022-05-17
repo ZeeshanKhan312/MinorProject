@@ -26,4 +26,5 @@ submitButton.addEventListener("click",async(e)=>{
     }).then(response=>response.json())
 
     alert(`${voterIdInput.value} deleted successfully`)
+    window.location.replace("/adminTask.html");
 })

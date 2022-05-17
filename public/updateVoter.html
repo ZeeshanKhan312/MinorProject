@@ -9,7 +9,7 @@
   <div class="container">
     <div class="title">Update Voter</div>
     <div class="content">
-      <form action="#"><br>
+      <form ><br>
           <div class="gender-details">
           <input type="radio" name="gender" id="dot-1">
           <input type="radio" name="gender" id="dot-2">
@@ -30,26 +30,29 @@
             </label>
           </div>
         </div>
+
+        <!-- YAHAN SE MAIN CODE H UPAR WALA 
+        AISE HI RADIO BUTTON BANA RAKHA H -->
         <div class="user-details">
           <div class="input-box">
             <span class="details">Address</span>
-            <input type="text" placeholder="Enter voter address" >
+            <input id="update-address" type="text" placeholder="Enter voter address" >
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter voter contact number" >
+            <input id="update-number" type="text" placeholder="Enter voter contact number" >
           </div>
           <div class="input-box">
             <span class="details">Date of Birth</span>
-            <input type="date" placeholder="Enter voter date of birth" >
+            <input id="update-dob" type="date" placeholder="Enter voter date of birth" >
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Submit">
+          <input id="submit-btn" type="submit" value="Submit">
         </div>
       </form>
     </div>
   </div>
-
+  <script src="./scripts/updateVoter.js"></script>
 </body>
 </html>
