@@ -1,6 +1,6 @@
 "use strict";
 
-if(!localStorage.getItem('admin-id')){
+if(!localStorage.getItem('admin-username')){
     alert("Not allowed")
     window.location.replace("/voterLogin.html");
 

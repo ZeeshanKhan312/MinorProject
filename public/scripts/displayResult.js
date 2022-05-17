@@ -3,7 +3,7 @@
 let candidates;
 const candidateResult = document.getElementById('result-body')
 
-const fetchVoters = async()=>{
+const fetchCandidates = async()=>{
     const res = await fetch(`/admin/list-candidates`,{
         method: 'POST',
         headers:{

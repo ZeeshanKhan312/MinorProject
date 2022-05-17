@@ -51,4 +51,5 @@ submitButton.addEventListener('click',async(e)=>{
     }
 
     alert(res.message)
+    window.location.replace("/adminTask.html");
 })
