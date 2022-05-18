@@ -150,5 +150,17 @@ module.exports = {
             return res.status(404).json(error)
             
         }
+    },
+    deleteCandidate:async function(req, res, next){
+        try {
+            const {name} = req.body
+
+            await Candidates.destroy({where: {name:name}}).then(res=>{
+                res.json(res)
+            })
+        } catch (error) {
+            return res.status(404).json(error)
+            
+        }
     }
 }

@@ -5,26 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voter task</title>
-    <link href="castVote.css" rel="stylesheet" />
+    <link href="task.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="header">
-        <h1>Cast Your Vote</h1>
-    </div>
-    <div class="box1">
-        <div class="party1">
-            <button id="AAP" type="submit">Vote</button>
-        </div>
-        <div class="party2">
-            <button id="BJP" type="submit">Vote</button>
-        </div>
-    </div>
-    <div class="box2">
-        <div class="party3">
-            <button id="CONG" type="submit">Vote</button>
-        </div>
-        <div class="party4">
-            <button id="SP" type="submit">Vote</button>
-        </div>
+    <table class="content-table">
+        <thead>
+          <tr>
+            <th>Party</th>
+            <th>Cast</th>
+          </tr>
+        </thead>
+        <tbody id="vote-cast-body">
+          
+        </tbody>
+      </table>
+      <script src="./scripts/castVote.js"></script>
 </body>
 </html>
