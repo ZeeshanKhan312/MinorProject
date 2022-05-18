@@ -1,3 +1,4 @@
+
 "use strict";
 
 let nameInput = document.getElementById('name-input')
