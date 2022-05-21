@@ -57,7 +57,7 @@ module.exports = {
         voter.save()
 
         return res.status(200).json({
-           error:{ message:"Vote casted successully"}
+           success:{ message:"Vote casted successully"}
         })
     },
     update: async function(req,res,next){
